@@ -18,6 +18,7 @@ route.post('/post', multer(multerConfig).single('file'), async (req, res) => {
     return res.json(post);
 });
 
+
 route.get('/post', async (req, res) => {
     const post = await Post.find();
 
