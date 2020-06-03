@@ -4,6 +4,7 @@ const multerConfig = require('./config/multer');
 
 const Post = require('./models/Post');
 
+
 route.post('/post', multer(multerConfig).single('file'), async (req, res) => {
     const { originalname: name, size, key, url = '' } = req.file;
    
